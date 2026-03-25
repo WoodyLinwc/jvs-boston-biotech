@@ -13,13 +13,13 @@ const en: UIStrings = {
   finishQuiz: "Finish Quiz",
   processSteps: "Process Steps",
   keyTerms: "Key Terms",
-  appTitle: "BioTech Learn",
+  appTitle: "BioMfg Learn",
   vocabulary: "Vocabulary",
   searchTerms: "Search terms...",
   noResults: "No terms found.",
   studyMaterials: "Study Materials",
   materialPlaceholder:
-    "Content coming soon. You can add your PDFs, videos, or notes here.",
+    "Content coming soon. You can add your notes, videos, or references here.",
   quiz: "Quiz",
   pdfMaterials: "Class Materials",
 };

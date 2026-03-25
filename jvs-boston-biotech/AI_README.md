@@ -1,8 +1,8 @@
-# AI_README: Biopharma Training App
+# AI_README: Biomanufacturing Training App
 
 ## Project Overview
 
-This is a React-based educational web application designed to teach users about biopharmaceutical manufacturing processes, Good Manufacturing Practices (GMP), and facility design. It serves as an interactive study guide and knowledge-check tool.
+This is a React-based educational web application designed to teach users about biotech manufacturing processes, Good Manufacturing Practices (GMP), and facility design. It serves as an interactive study guide for anyone learning biomanufacturing — including upstream cell culture, harvest, downstream purification, and fill-finish operations.
 
 ## Tech Stack
 
@@ -15,9 +15,9 @@ This is a React-based educational web application designed to teach users about 
 
 ## Core Features
 
-1. **Process Stages:** Interactive breakdown of biopharma manufacturing stages (Upstream, Harvest, Downstream, Fill-Finish). Each stage includes specific steps and key terms.
-2. **Vocabulary:** A searchable, categorized glossary of biopharma terminology (General, Upstream, Harvest, Downstream, Fill/Finish, Lab Supplies).
-3. **Study Materials:** In-depth reading materials powered by Markdown files.
+1. **Process Stages:** Interactive breakdown of biomanufacturing stages (Upstream, Harvest, Downstream, Fill-Finish). Each stage includes specific steps and key terms.
+2. **Vocabulary:** A searchable, categorized glossary of biomanufacturing terminology (General, Upstream, Harvest, Downstream, Fill/Finish, Lab Supplies).
+3. **Study Materials:** In-depth reading materials powered by Markdown files (Intro to Biomanufacturing, GMP Guidelines, Facility Design).
 4. **Quiz:** Navigation and view are wired up — content implementation is pending.
 5. **Class Materials:** Navigation and view are wired up — PDF upload implementation is pending.
 6. **Localization (i18n) Ready:** Built-in support for multiple languages (English and Chinese structure exists, though Chinese content is currently using English placeholders).
@@ -38,13 +38,13 @@ The application strictly separates data from UI components to make content updat
     types.ts                # TypeScript interfaces for all data structures
     ui.ts                   # UI string translations
     vocabulary.ts           # Assembles vocabulary categories from individual files
-    stages.en.ts            # Manufacturing stage and step content
+    stages.en.ts            # Biomanufacturing stage and step content
     quiz.ts                 # Quiz question data
     materials.ts            # Metadata for study materials (imports markdown)
     /materials              # Raw Markdown files for study content
-      intro.md
-      gmp.md
-      facility.md
+      intro.md                # Intro to Biomanufacturing
+      gmp.md                  # GMP Guidelines
+      facility.md             # Facility Design
     /vocabulary             # One file per vocabulary category
       general.ts
       upstream.ts
@@ -62,7 +62,7 @@ Study materials are written in standard Markdown (`.md`) files located in `src/d
 
 - They are imported into `src/data/materials.ts` using Vite's `?raw` suffix (e.g., `import introContent from './materials/intro.md?raw';`).
 - The `MaterialView.tsx` component uses `react-markdown` and Tailwind's `prose` class to render this raw string into styled HTML.
-- **To add a new study material:** Create a new `.md` file in `src/data/materials/`, import it into `materials.ts`, and add a new entry to the `materialsEn` array.
+- **To add a new study material:** Create a new `.md` file in `src/data/materials/`, import it into `materials.ts`, and add a new entry to the `materialsEn` array. Also add the new `id` to the `MaterialId` union type in `types.ts`.
 
 ### 2. Categorized Vocabulary
 
@@ -94,8 +94,8 @@ The app uses a simple state-based navigation system in `App.tsx` — a single `a
 
 Two views are structurally present but not yet functional:
 
-- **`QuizView.tsx`** — Shows a "Coming Soon" empty state. When implementing, wire in questions from `src/data/quiz.ts` and replace the empty state with the quiz UI. The full quiz interaction logic already exists in the codebase as a reference (see the original `QuizView` in git history or `quiz.ts` for question data shape).
-- **`PdfMaterialsView.tsx`** — Shows a drag-and-drop upload zone shell and a greyed-out example file list. When implementing, wire up file input handling, storage (local or cloud), and the file list rendering.
+- **`QuizView.tsx`** — Shows a "Coming Soon" empty state. When implementing, wire in questions from `src/data/quiz.ts` and replace the empty state with the quiz UI.
+- **`PdfMaterialsView.tsx`** — Shows a drag-and-drop upload zone shell and a greyed-out example file list. When implementing, wire up file input handling, storage, and the file list rendering.
 
 ### 6. Styling Guidelines
 
