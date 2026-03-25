@@ -1,6 +1,7 @@
-export type Language = 'en' | 'zh';
-export type StageId = 'upstream' | 'harvest' | 'downstream' | 'fill-finish';
-export type MaterialId = 'intro' | 'gmp' | 'facility';
+export type Language = "en" | "zh";
+export type StageId = "upstream" | "harvest" | "downstream" | "fill-finish";
+export type MaterialId = "intro" | "gmp" | "facility";
+export type SelfLearningId = "vocabulary" | "quiz" | "pdf-materials";
 
 export interface ProcessStep {
   name: string;
@@ -68,6 +69,8 @@ export interface UIStrings {
   noResults: string;
   studyMaterials: string;
   materialPlaceholder: string;
+  quiz: string;
+  pdfMaterials: string;
 }
 
 export interface AppData {

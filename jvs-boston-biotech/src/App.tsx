@@ -11,14 +11,18 @@ import {
   BookA,
   FileText,
   Layout,
+  ClipboardList,
+  BookMarked,
 } from "lucide-react";
 import { translations, Language, StageId, MaterialId } from "./data";
 import ProcessView from "./components/ProcessView";
 import VocabularyView from "./components/VocabularyView";
 import MaterialView from "./components/MaterialView";
+import QuizView from "./components/QuizView";
+import PdfMaterialsView from "./components/PdfMaterialsView";
 import { cn } from "./lib/utils";
 
-type Tab = StageId | "vocabulary" | MaterialId;
+type Tab = StageId | MaterialId | "vocabulary" | "quiz" | "pdf-materials";
 
 const iconMap: Record<string, React.ElementType> = {
   FlaskConical,
@@ -28,6 +32,8 @@ const iconMap: Record<string, React.ElementType> = {
   FileText,
   BookOpen,
   Layout,
+  ClipboardList,
+  BookMarked,
 };
 
 export default function App() {
@@ -53,76 +59,77 @@ export default function App() {
     </div>
   );
 
+  const NavButton = ({
+    tab,
+    icon: Icon,
+    label,
+  }: {
+    tab: Tab;
+    icon: React.ElementType;
+    label: string;
+  }) => (
+    <button
+      onClick={() => {
+        setActiveTab(tab);
+        setIsMobileMenuOpen(false);
+      }}
+      className={cn(
+        "w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-colors",
+        activeTab === tab
+          ? "bg-teal-50 text-teal-700"
+          : "text-slate-600 hover:bg-slate-100 hover:text-slate-900",
+      )}
+    >
+      <Icon className="w-5 h-5 shrink-0" />
+      <span className="truncate">{label}</span>
+    </button>
+  );
+
   const NavLinks = () => (
     <div className="space-y-1 flex flex-col h-full">
-      <div className="px-4 mb-3 text-xs font-bold text-slate-400 uppercase tracking-wider">
+      {/* Study Materials */}
+      <div className="px-4 mb-2 text-xs font-bold text-slate-400 uppercase tracking-wider">
         {data.ui.studyMaterials}
       </div>
       {data.studyMaterials.map((material) => {
         const Icon = iconMap[material.icon] || FileText;
         return (
-          <button
+          <NavButton
             key={material.id}
-            onClick={() => {
-              setActiveTab(material.id);
-              setIsMobileMenuOpen(false);
-            }}
-            className={cn(
-              "w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-colors mb-1",
-              activeTab === material.id
-                ? "bg-teal-50 text-teal-700"
-                : "text-slate-600 hover:bg-slate-100 hover:text-slate-900",
-            )}
-          >
-            <Icon className="w-5 h-5 shrink-0" />
-            <span className="truncate">{material.title}</span>
-          </button>
+            tab={material.id}
+            icon={Icon}
+            label={material.title}
+          />
         );
       })}
 
-      <div className="px-4 mt-6 mb-3 text-xs font-bold text-slate-400 uppercase tracking-wider">
+      {/* Process Stages */}
+      <div className="px-4 mt-6 mb-2 text-xs font-bold text-slate-400 uppercase tracking-wider">
         {data.ui.processStages}
       </div>
       {data.processStages.map((stage) => {
         const Icon = iconMap[stage.icon];
         return (
-          <button
+          <NavButton
             key={stage.id}
-            onClick={() => {
-              setActiveTab(stage.id);
-              setIsMobileMenuOpen(false);
-            }}
-            className={cn(
-              "w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-colors",
-              activeTab === stage.id
-                ? "bg-teal-50 text-teal-700"
-                : "text-slate-600 hover:bg-slate-100 hover:text-slate-900",
-            )}
-          >
-            <Icon className="w-5 h-5 shrink-0" />
-            <span className="truncate">{stage.title}</span>
-          </button>
+            tab={stage.id}
+            icon={Icon}
+            label={stage.title}
+          />
         );
       })}
 
-      <div className="px-4 mt-6 mb-3 text-xs font-bold text-slate-400 uppercase tracking-wider">
+      {/* Self Learning */}
+      <div className="px-4 mt-6 mb-2 text-xs font-bold text-slate-400 uppercase tracking-wider">
         {data.ui.selfLearning}
       </div>
-      <button
-        onClick={() => {
-          setActiveTab("vocabulary");
-          setIsMobileMenuOpen(false);
-        }}
-        className={cn(
-          "w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-colors mb-1",
-          activeTab === "vocabulary"
-            ? "bg-teal-50 text-teal-700"
-            : "text-slate-600 hover:bg-slate-100 hover:text-slate-900",
-        )}
-      >
-        <BookA className="w-5 h-5 shrink-0" />
-        <span className="truncate">{data.ui.vocabulary}</span>
-      </button>
+      <NavButton tab="vocabulary" icon={BookA} label={data.ui.vocabulary} />
+      <NavButton tab="quiz" icon={ClipboardList} label={data.ui.quiz} />
+      <NavButton
+        tab="pdf-materials"
+        icon={BookMarked}
+        label={data.ui.pdfMaterials}
+      />
 
       <div className="flex-1" />
       <LanguageSwitcher />
@@ -185,6 +192,8 @@ export default function App() {
         {activeTab === "vocabulary" && (
           <VocabularyView categories={data.vocabulary} ui={data.ui} />
         )}
+        {activeTab === "quiz" && <QuizView ui={data.ui} />}
+        {activeTab === "pdf-materials" && <PdfMaterialsView ui={data.ui} />}
       </main>
     </div>
   );
