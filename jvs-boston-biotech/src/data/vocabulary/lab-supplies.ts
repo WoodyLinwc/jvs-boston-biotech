@@ -105,7 +105,7 @@ export const labSuppliesEn: VocabularyTerm[] = [
     term: "Micropipettes",
     definition:
       "Used to measure and transfer very small, precise volumes, 0.1 µL to 1000 µL",
-    imageUrl: "lab-supplies/Micropipettes.jpeg",
+    imageUrl: "lab-supplies/Micropipettes.png",
   },
   {
     term: "Tips",
