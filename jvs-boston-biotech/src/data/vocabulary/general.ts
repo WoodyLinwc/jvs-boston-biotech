@@ -23,7 +23,7 @@ export const generalEn: VocabularyTerm[] = [
     imageUrl: "",
   },
   {
-    term: "",
+    term: "Prokaryotes",
     definition: "",
     imageUrl: "",
   },
