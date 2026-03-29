@@ -21,22 +21,16 @@ export default function VocabularyView({
 
   const allCategories = categories.map((cat) => cat.title);
 
-  const filteredTerms = allTerms
-    .filter((term) => {
-      const matchesSearch =
-        term.term.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        term.definition.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        term.categoryTitle.toLowerCase().includes(searchQuery.toLowerCase());
-      const matchesCategory =
-        activeCategory === "All" || term.categoryTitle === activeCategory;
-      return matchesSearch && matchesCategory;
-    })
-    .sort((a, b) => {
-      const indexA = allCategories.indexOf(a.categoryTitle);
-      const indexB = allCategories.indexOf(b.categoryTitle);
-      if (indexA !== indexB) return indexA - indexB;
-      return a.term.localeCompare(b.term);
-    });
+  // Filter only — no sort, so original data file order is preserved
+  const filteredTerms = allTerms.filter((term) => {
+    const matchesSearch =
+      term.term.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      term.definition.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      term.categoryTitle.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesCategory =
+      activeCategory === "All" || term.categoryTitle === activeCategory;
+    return matchesSearch && matchesCategory;
+  });
 
   return (
     <div className="max-w-5xl mx-auto p-4 sm:p-6 md:p-8 lg:p-10 space-y-5 md:space-y-8">
@@ -65,7 +59,7 @@ export default function VocabularyView({
         </div>
       </div>
 
-      {/* Category filter chips — scroll horizontally on very small screens */}
+      {/* Category filter chips */}
       <div className="flex flex-wrap gap-2">
         <button
           onClick={() => setActiveCategory("All")}
@@ -118,11 +112,11 @@ export default function VocabularyView({
               </p>
 
               {term.imageUrl && (
-                <div className="mt-3 sm:mt-4 rounded-xl overflow-hidden border border-slate-100">
+                <div className="mt-3 sm:mt-4 rounded-xl overflow-hidden border border-slate-100 bg-slate-50">
                   <img
                     src={term.imageUrl}
                     alt={term.term}
-                    className="w-full h-36 sm:h-48 object-cover"
+                    className="w-full object-contain max-h-56"
                     referrerPolicy="no-referrer"
                   />
                 </div>
