@@ -60,6 +60,12 @@ export const labSuppliesEn: VocabularyTerm[] = [
     imageUrl: "lab-supplies/Sterile-Petri-Plates.jpeg",
   },
   {
+    term: "Centrifuge",
+    definition:
+      "A machine that spins samples at very high speeds to separate components based on their density and size",
+    imageUrl: "lab-supplies/Centrifuge.jpeg",
+  },
+  {
     term: "Centrifuge tubes",
     definition:
       "Larger tubes (e.g., 15 mL or 50 mL) designed to withstand the force of centrifugation for separating samples",
@@ -137,12 +143,59 @@ export const labSuppliesEn: VocabularyTerm[] = [
     imageUrl: "lab-supplies/Magnetic-Stir-Bar.jpeg",
   },
   {
-    term: "Water Purification",
+    term: "Water Purification (MIlli-Q system)",
     definition: "Filtered water does not contain minerals, NOT sterile",
+  },
+  {
+    term: "Autoclave",
+    definition:
+      "A machine that uses high-pressure steam to sterilize equipment, media, and waste, combines heat + steam + pressure",
+    imageUrl: "lab-supplies/Autoclave.jpeg",
+  },
+
+  {
+    term: "Replicate Organism Detection and Counting (RODAC) plate",
+    definition:
+      "A special type of contact plate used to monitor and detect microbial contamination on surfaces, RODAC plates are pressed directly onto surfaces",
+    imageUrl: "lab-supplies/RODAC-plate.jpeg",
+  },
+  {
+    term: "Air Sampler (Climet)",
+    definition: "Counts non-viable (non-living) particles in the air",
+    imageUrl: "lab-supplies/Air-Sampler.jpeg",
+  },
+  {
+    term: "",
+    definition: "",
+    imageUrl: "lab-supplies/",
+  },
+  {
+    term: "Bioreactor",
+    definition:
+      "A vessel or system designed to provide the optimal environment for biological organisms or cells to grow and produce a desired product",
+    imageUrl: "lab-supplies/Bioreactor.jpeg",
+  },
+  {
+    term: "Peristaltic Pump",
+    definition:
+      "A pump that moves liquids through a tube by squeezing and releasing the tube in a wavelike motion",
+    imageUrl: "lab-supplies/Peristaltic-Pump.jpeg",
+  },
+  {
+    term: "Vacuum Pump",
+    definition:
+      "A pump that removes air from a sealed system to create negative pressure (vacuum)",
+    imageUrl: "lab-supplies/Vacuum-Pump.jpeg",
+  },
+  {
+    term: "Tubing Welder",
+    definition:
+      "A device that sterile connects two pieces of tubing together without exposing the contents to the outside environment",
+    imageUrl: "lab-supplies/Tubing-Welder.jpeg",
   },
   // {
   //   term: "",
   //   definition: "",
-  //   imageUrl: "",
+  //   imageUrl: "lab-supplies/",
   // },
 ];
