@@ -1,11 +1,6 @@
 import { VocabularyTerm } from "../types";
 
 export const labSuppliesEn: VocabularyTerm[] = [
-  // {
-  //   term: "",
-  //   definition: "",
-  //   imageUrl: "",
-  // },
   {
     term: "Erlenmeyer flask",
     definition:
@@ -92,7 +87,7 @@ export const labSuppliesEn: VocabularyTerm[] = [
   {
     term: "Nitrile (Synthetic Rubber)",
     definition:
-      "Currently the most popular glove in biotech/medical labs, slightly more expensive than vinyl",
+      "The most popular glove in biotech and medical labs — latex-free, excellent chemical resistance, durable, and safe for people with latex allergies.",
     imageUrl: "lab-supplies/Nitrile.jpeg",
   },
   {
@@ -116,52 +111,55 @@ export const labSuppliesEn: VocabularyTerm[] = [
   {
     term: "Tips",
     definition:
-      "Disposable plastic tips that attach to the end of micropipettes",
+      "Disposable plastic tips that attach to the end of micropipettes, changed between every sample to prevent contamination",
     imageUrl: "lab-supplies/Tips.jpeg",
   },
   {
     term: "Transfer pipettes",
     definition:
-      "Simple, disposable plastic pipettes, non-precise transfers of liquids",
+      "Simple, disposable plastic pipettes used for quick, non-precise transfers of liquids",
     imageUrl: "lab-supplies/Transfer-pipettes.jpeg",
   },
   {
     term: "Bunsen Burner",
     definition:
-      "A gas-powered flame device for creating a sterile working environment",
+      "A gas-powered flame device for sterilizing tools and creating an upward airflow that pushes contaminants away from the work area",
     imageUrl: "lab-supplies/Bunsen-Burner.jpeg",
   },
   {
     term: "Stirrer/Hot Plate",
-    definition: "A combined instrument that can heat AND stir at the same time",
+    definition:
+      "A combined instrument that can heat AND stir simultaneously, controlled independently via temperature and speed knobs",
     imageUrl: "lab-supplies/Stirrer.jpeg",
   },
   {
     term: "Magnetic Stir Bar (Stir Flea)",
     definition:
-      "A small magnet coated in Teflon (PTFE) placed inside the liquid in a container",
+      "A small Teflon-coated magnet placed inside a liquid container that spins when driven by the hot plate's internal magnet, enabling contactless, contamination-free stirring",
     imageUrl: "lab-supplies/Magnetic-Stir-Bar.jpeg",
   },
   {
-    term: "Water Purification (MIlli-Q system)",
-    definition: "Filtered water does not contain minerals, NOT sterile",
+    term: "Water Purification (Milli-Q system)",
+    definition:
+      "A system that produces ultrapure water by removing ions, organics, and particles — not sterile, but free of minerals and contaminants that could interfere with sensitive experiments.",
+    imageUrl: "lab-supplies/Water-Purification.jpeg",
   },
   {
     term: "Autoclave",
     definition:
-      "A machine that uses high-pressure steam to sterilize equipment, media, and waste, combines heat + steam + pressure",
+      "A machine that uses high-pressure steam (heat + steam + pressure, typically 121°C at 15 psi) to sterilize equipment, media, and biohazardous waste",
     imageUrl: "lab-supplies/Autoclave.jpeg",
   },
-
   {
     term: "Replicate Organism Detection and Counting (RODAC) plate",
     definition:
-      "A special type of contact plate used to monitor and detect microbial contamination on surfaces, RODAC plates are pressed directly onto surfaces",
+      "A contact plate with convex agar that is pressed directly onto surfaces to detect and count microbial contamination — commonly used for environmental monitoring in cleanrooms and sterile manufacturing areas",
     imageUrl: "lab-supplies/RODAC-plate.jpeg",
   },
   {
     term: "Air Sampler (Climet)",
-    definition: "Counts non-viable (non-living) particles in the air",
+    definition:
+      "An instrument that actively pulls air through a collection device to count airborne particles and detect microbial contamination, commonly used in cleanrooms and pharmaceutical manufacturing.",
     imageUrl: "lab-supplies/Air-Sampler.jpeg",
   },
   {
@@ -172,30 +170,25 @@ export const labSuppliesEn: VocabularyTerm[] = [
   {
     term: "Bioreactor",
     definition:
-      "A vessel or system designed to provide the optimal environment for biological organisms or cells to grow and produce a desired product",
+      "A vessel or system designed to provide the optimal controlled environment (temperature, pH, oxygen, agitation) for biological organisms or cells to grow and produce a desired product at scale",
     imageUrl: "lab-supplies/Bioreactor.jpeg",
   },
   {
     term: "Peristaltic Pump",
     definition:
-      "A pump that moves liquids through a tube by squeezing and releasing the tube in a wavelike motion",
+      "A pump that moves liquids through tubing by squeezing and releasing it in a wavelike motion — the liquid only contacts the tubing, making it ideal for sterile and contamination-sensitive transfers",
     imageUrl: "lab-supplies/Peristaltic-Pump.jpeg",
   },
   {
     term: "Vacuum Pump",
     definition:
-      "A pump that removes air from a sealed system to create negative pressure (vacuum)",
+      "A pump that removes air from a sealed system to create negative pressure, used for filtration, aspiration, and degassing in lab workflows",
     imageUrl: "lab-supplies/Vacuum-Pump.jpeg",
   },
   {
     term: "Tubing Welder",
     definition:
-      "A device that sterile connects two pieces of tubing together without exposing the contents to the outside environment",
+      "A device that creates a sterile, permanent connection between two pieces of tubing using heat and pressure, maintaining a closed system without risk of contamination.",
     imageUrl: "lab-supplies/Tubing-Welder.jpeg",
   },
-  // {
-  //   term: "",
-  //   definition: "",
-  //   imageUrl: "lab-supplies/",
-  // },
 ];
