@@ -133,6 +133,9 @@ export default function App() {
 
       <div className="flex-1" />
       <LanguageSwitcher />
+      <div className="px-4 py-2 text-xs text-slate-400 text-center border-t border-slate-100">
+        Made by <span className="font-medium text-slate-500">Woody Lin</span>
+      </div>
     </div>
   );
 
