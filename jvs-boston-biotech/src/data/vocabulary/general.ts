@@ -8,6 +8,12 @@ export const generalEn: VocabularyTerm[] = [
     imageUrl: "",
   },
   {
+    term: "Aseptic Processing",
+    definition:
+      "A technique used to handle and transfer biological materials in a way that prevents contamination — includes working in a biosafety cabinet, using sterile equipment, and following strict protocols to maintain sterility.",
+    imageUrl: "",
+  },
+  {
     term: "GMP (Good Manufacturing Practice)",
     definition:
       "A regulatory framework that ensures products are consistently produced and controlled to quality standards, minimizing risks of contamination, errors, and inconsistency in pharmaceutical and biotech manufacturing.",
@@ -49,8 +55,33 @@ export const generalEn: VocabularyTerm[] = [
     imageUrl: "",
   },
   {
-    term: "",
-    definition: "",
+    term: "pH Level",
+    definition:
+      "A scale from 0–14 that measures the acidity or alkalinity of a solution — below 7 is acidic, above 7 is basic, and 7 is neutral; critical for maintaining proper conditions for biological reactions.",
+    imageUrl: "",
+  },
+  {
+    term: "Conductivity",
+    definition:
+      "A measure of a solution's ability to conduct electricity, which reflects its ion concentration — used in biotech to verify buffer and media preparation.",
+    imageUrl: "",
+  },
+  {
+    term: "Antibody",
+    definition:
+      "A protein produced by the immune system that binds specifically to a target molecule (antigen) — widely used in biotech for research, diagnostics, and as therapeutic drugs.",
+    imageUrl: "",
+  },
+  {
+    term: "Antibiotic",
+    definition:
+      "A substance that kills or inhibits the growth of bacteria — in biotech, antibiotics like ampicillin and kanamycin are used as selection markers to ensure only cells carrying the desired plasmid survive.",
+    imageUrl: "",
+  },
+  {
+    term: "Arabinose",
+    definition:
+      "A sugar molecule used in biotech as an inducer to switch on gene expression in bacteria — commonly used to control protein production in E. coli expression systems.",
     imageUrl: "",
   },
   {
@@ -63,6 +94,12 @@ export const generalEn: VocabularyTerm[] = [
     term: "Buffer",
     definition:
       "A solution that resists changes in pH when small amounts of acid or base are added, used in biotech to maintain stable conditions for cells and reactions.",
+    imageUrl: "",
+  },
+  {
+    term: "Plasmid",
+    definition:
+      "A small, circular piece of DNA found in bacteria that replicates independently of the chromosome — widely used in biotech as a vector to carry and express genes of interest.",
     imageUrl: "",
   },
   {

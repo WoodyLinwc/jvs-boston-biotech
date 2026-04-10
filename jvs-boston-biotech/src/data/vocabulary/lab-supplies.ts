@@ -121,6 +121,12 @@ export const labSuppliesEn: VocabularyTerm[] = [
     imageUrl: "lab-supplies/Transfer-pipettes.jpeg",
   },
   {
+    term: "Spatula",
+    definition:
+      "A flat, scoop-like tool used to transfer, mix, or scrape solid materials such as powders and chemicals in the lab",
+    imageUrl: "lab-supplies/Spatula.png",
+  },
+  {
     term: "Bunsen Burner",
     definition:
       "A gas-powered flame device for sterilizing tools and creating an upward airflow that pushes contaminants away from the work area",
@@ -145,6 +151,11 @@ export const labSuppliesEn: VocabularyTerm[] = [
     imageUrl: "lab-supplies/Water-Purification.jpeg",
   },
   {
+    term: "",
+    definition: "",
+    imageUrl: "lab-supplies/",
+  },
+  {
     term: "Autoclave",
     definition:
       "A machine that uses high-pressure steam (heat + steam + pressure, typically 121°C at 15 psi) to sterilize equipment, media, and biohazardous waste",
@@ -163,9 +174,34 @@ export const labSuppliesEn: VocabularyTerm[] = [
     imageUrl: "lab-supplies/Air-Sampler.jpeg",
   },
   {
-    term: "",
-    definition: "",
-    imageUrl: "lab-supplies/",
+    term: "pH and Conductivity Meter",
+    definition:
+      "An instrument that measures the acidity/alkalinity (pH) and ion concentration (conductivity) of a solution — critical for verifying buffer preparation and media quality.",
+    imageUrl: "lab-supplies/pH-Conductivity-Meter.jpg",
+  },
+  {
+    term: "Spectrophotometer",
+    definition:
+      "An instrument that measures how much light a sample absorbs at a specific wavelength — used to measure optical density (OD) to monitor bacterial growth or quantify DNA/protein concentration.",
+    imageUrl: "lab-supplies/Spectrophotometer.jpeg",
+  },
+  {
+    term: "Cuvette",
+    definition:
+      "A small, transparent container that holds liquid samples inside a spectrophotometer for absorbance measurement.",
+    imageUrl: "lab-supplies/Cuvette.jpeg",
+  },
+  {
+    term: "Incubator",
+    definition:
+      "A temperature-controlled chamber that maintains optimal conditions (temperature, humidity, CO₂) for growing cells, bacteria, or microorganisms.",
+    imageUrl: "lab-supplies/Incubator.jpeg",
+  },
+  {
+    term: "Biosafety Cabinet (BSC)",
+    definition:
+      "An enclosed, ventilated workspace that protects both the researcher and samples from contamination using HEPA-filtered airflow — essential for cell culture and working with biological hazards.",
+    imageUrl: "lab-supplies/Biosafety-Cabinet.jpeg",
   },
   {
     term: "Bioreactor",
