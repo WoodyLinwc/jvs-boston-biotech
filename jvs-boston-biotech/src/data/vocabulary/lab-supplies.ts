@@ -121,6 +121,12 @@ export const labSuppliesEn: VocabularyTerm[] = [
     imageUrl: "lab-supplies/Transfer-pipettes.jpeg",
   },
   {
+    term: "Syringe",
+    definition:
+      "A handheld device used to precisely draw up or inject small volumes of liquid — commonly paired with a filter (0.22 µm) for sterilizing heat-sensitive solutions.",
+    imageUrl: "lab-supplies/Syringe.jpeg",
+  },
+  {
     term: "Spatula",
     definition:
       "A flat, scoop-like tool used to transfer, mix, or scrape solid materials such as powders and chemicals in the lab",
@@ -149,6 +155,18 @@ export const labSuppliesEn: VocabularyTerm[] = [
     definition:
       "A system that produces ultrapure water by removing ions, organics, and particles — not sterile, but free of minerals and contaminants that could interfere with sensitive experiments.",
     imageUrl: "lab-supplies/Water-Purification.jpeg",
+  },
+  {
+    term: "Gowning",
+    definition:
+      "The process of putting on protective clothing (gown, gloves, mask, hairnet, booties) before entering a cleanroom or sterile manufacturing area to prevent contamination from personnel.",
+    imageUrl: "lab-supplies/Gowning.jpg",
+  },
+  {
+    term: "Sonicator",
+    definition:
+      "A device that uses high-frequency sound waves (ultrasound) to disrupt cells, break up clumps, or mix samples — commonly used for cell lysis to release proteins or DNA from inside cells.",
+    imageUrl: "lab-supplies/Sonicator.jpeg",
   },
   {
     term: "",

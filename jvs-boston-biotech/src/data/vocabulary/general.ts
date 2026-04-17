@@ -50,6 +50,12 @@ export const generalEn: VocabularyTerm[] = [
     imageUrl: "",
   },
   {
+    term: "Cell lysis",
+    definition:
+      "The process of breaking open cells to release their contents — such as proteins or DNA — using mechanical force, chemicals, or sound waves (sonication).",
+    imageUrl: "",
+  },
+  {
     term: "",
     definition: "",
     imageUrl: "",
@@ -76,6 +82,24 @@ export const generalEn: VocabularyTerm[] = [
     term: "Antibiotic",
     definition:
       "A substance that kills or inhibits the growth of bacteria — in biotech, antibiotics like ampicillin and kanamycin are used as selection markers to ensure only cells carrying the desired plasmid survive.",
+    imageUrl: "",
+  },
+  {
+    term: "Kanamycin",
+    definition:
+      "An antibiotic commonly used in biotech as a selection marker — only bacteria carrying a plasmid with kanamycin resistance will survive, confirming successful transformation.",
+    imageUrl: "",
+  },
+  {
+    term: "IPTG",
+    definition:
+      "Isopropyl β-D-1-thiogalactopyranoside — a chemical inducer used in biotech to trigger gene expression in E. coli, commonly used to switch on production of a target protein.",
+    imageUrl: "",
+  },
+  {
+    term: "Myoglobin (Mb)",
+    definition:
+      "An oxygen-binding protein found in muscle tissue — often used as a model protein in biotech research and lab courses due to its well-characterized structure and distinctive red color.",
     imageUrl: "",
   },
   {
